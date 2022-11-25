@@ -13,7 +13,7 @@ provider:
   runtime: nodejs12.x
   lambdaHashingVersion: '20201221'
 
-  stage: ${opt:stage, 'dev'}
+  stage: ${opt:stage, 'development'}
   region: ${opt:region, 'us-east-1'}
 
   tracing:
@@ -27,7 +27,7 @@ provider:
     TODOS_CREATED_AT_INDEX: todos-index-${self:provider.environment.TODOS_TABLE}
     ATTACHMENT_S3_BUCKET: serverless-c4-todo-images-${self:provider.stage}-256keith
     SIGNED_URL_EXPIRATION: 300
-    AUTH_0_JWKS_URL: https://dev-p0z9cafx.us.auth0.com/.well-known/jwks.json
+    AUTH_0_JWKS_URL: https://dev-ugpofucui8x0vwsb.us.auth0.com/.well-known/jwks.json
 
   logs:
     # Enable API Gateway logs
